@@ -27,7 +27,11 @@ public class Item {
     private String name;
 
     public Item() {}
-    public Item(int id) {}
-    public Item(int id, String name) {}
-
+    public Item(String id) {
+        this.id = id;
+    }
+    public Item(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 }
