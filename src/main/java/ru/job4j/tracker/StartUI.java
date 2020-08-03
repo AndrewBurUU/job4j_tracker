@@ -5,8 +5,6 @@ public class StartUI {
         Tracker tracker = new Tracker();
         Item item = new Item(1,"задание по хранилищу");
         tracker.add(item);
-        tracker.add(item);
-        tracker.add(item);
         item = tracker.findById(1);
         System.out.println(item.getId() + ": " + item.getName());
     }
