@@ -4,7 +4,10 @@ public class StartUI {
     public static void main(String[] args) {
         Tracker tracker = new Tracker();
         Item item = new Item(1,"задание по хранилищу");
+        Item nonameItem = new Item();
+        nonameItem.setName("noname");
         tracker.add(item);
+        tracker.add(nonameItem);
         item = tracker.findById(1);
         System.out.println(item.getId() + ": " + item.getName());
     }
