@@ -13,14 +13,14 @@ public class Matches {
             select = Integer.valueOf(input.nextLine());
             count = count - select;
             if (count == 0) {
-                System.out.println("Игрок 1 победил! ");
+                System.out.println("Игрок 1 победил!");
                 break;
             }
             System.out.print("Игрок2: ");
             select = Integer.valueOf(input.nextLine());
             count = count - select;
             if (count == 0) {
-                System.out.println("Игрок 2 победил! ");
+                System.out.println("Игрок 2 победил!");
                 break;
             }
             System.out.println("Остаток: " + String.valueOf(count));
