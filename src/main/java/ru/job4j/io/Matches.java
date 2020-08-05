@@ -7,23 +7,19 @@ public class Matches {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int count = 11;
-        int select = 0;3
+        int select = 0;
         while (count > 0) {
-            System.out.print("Игрок1: ");
-            select = Integer.valueOf(input.nextLine());
-            count = count - select;
-            if (count == 0) {
-                System.out.println("Игрок 1 победил!");
-                break;
+            System.out.println("");
+            for (int player = 1; player < 3; player++) {
+                System.out.print("Игрок " +  String.valueOf(player) + ": ");
+                select = Integer.valueOf(input.nextLine());
+                count = count - select;
+                System.out.println("Остаток: " + String.valueOf(count));
+                if (count == 0) {
+                    System.out.print("Игрок "  + String.valueOf(player) + " победил!");
+                    break;
+                }
             }
-            System.out.print("Игрок2: ");
-            select = Integer.valueOf(input.nextLine());
-            count = count - select;
-            if (count == 0) {
-                System.out.println("Игрок 2 победил!");
-                break;
-            }
-            System.out.println("Остаток: " + String.valueOf(count));
         }
     }
 }
