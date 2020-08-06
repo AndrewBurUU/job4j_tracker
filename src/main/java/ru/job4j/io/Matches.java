@@ -8,18 +8,18 @@ public class Matches {
         Scanner input = new Scanner(System.in);
         int count = 11;
         int select = 0;
+        boolean player = true;
         while (count > 0) {
-            System.out.println("");
-            for (int player = 1; player < 3; player++) {
-                System.out.print("Игрок " +  String.valueOf(player) + ": ");
-                select = Integer.valueOf(input.nextLine());
-                count = count - select;
-                System.out.println("Остаток: " + String.valueOf(count));
-                if (count == 0) {
-                    System.out.print("Игрок "  + String.valueOf(player) + " победил!");
-                    break;
-                }
+            String playerName = player ? "Игрок 1" : "Игрок 2";
+            System.out.print(playerName + ": ");
+            select = Integer.valueOf(input.nextLine());
+            count = count - select;
+            System.out.println("Остаток: " + String.valueOf(count));
+            if (count == 0) {
+                System.out.print(playerName + " победил!");
+                break;
             }
+            player = ! player;
         }
     }
 }
