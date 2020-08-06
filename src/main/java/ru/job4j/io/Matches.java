@@ -13,6 +13,10 @@ public class Matches {
             String playerName = player ? "Игрок 1" : "Игрок 2";
             System.out.print(playerName + ": ");
             select = Integer.valueOf(input.nextLine());
+            while (select < 1 || select > 3) {
+                System.out.print("Надо брать от 1 до 3 спичек! Попробуйте ещё раз: ");
+                select = Integer.valueOf(input.nextLine());
+            }
             count = count - select;
             System.out.println("Остаток: " + String.valueOf(count));
             if (count == 0) {
