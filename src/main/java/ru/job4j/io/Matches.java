@@ -9,8 +9,9 @@ public class Matches {
         int count = 11;
         int select = 0;
         boolean player = true;
+        String playerName = "Игрок 1";
         while (count > 0) {
-            String playerName = player ? "Игрок 1" : "Игрок 2";
+            playerName = player ? "Игрок 1" : "Игрок 2";
             System.out.print(playerName + ": ");
             select = Integer.valueOf(input.nextLine());
             while (select < 1 || select > 3) {
@@ -19,11 +20,10 @@ public class Matches {
             }
             count = count - select;
             System.out.println("Остаток: " + String.valueOf(count));
-            if (count == 0) {
-                System.out.print(playerName + " победил!");
-                break;
-            }
             player = ! player;
+        }
+        if (count == 0) {
+            System.out.print(playerName + " победил!");
         }
     }
 }
