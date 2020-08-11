@@ -22,8 +22,7 @@ public class StartUI {
         System.out.println("=== Edit item ====");
         int id = Integer.valueOf(input.askStr("Enter item id: "));
         String name = input.askStr("Enter new name: ");
-        Item item = tracker.findById(id);
-        item.setName(name);
+        Item item = new Item(id, name);
         if (tracker.replace(id, item)) {
             System.out.println("Item replaced");
         } else {
