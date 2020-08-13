@@ -65,7 +65,7 @@ public class StartUITest {
     public void whenEditItem() {
         Tracker tracker = new Tracker();
         /* Добавим в tracker новую заявку */
-        Item item = tracker.add(new Item("Replaced item"));
+        Item item = tracker.add(new Item("Edited item"));
         /* Входные данные должны содержать ID добавленной заявки item.getId() */
         String replacedName = "New item name";
         Input in = new StubInput(
