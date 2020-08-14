@@ -10,14 +10,14 @@ public class EditAction implements UserAction {
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        System.out.println("=== Edit Item ====");
+        out.println("=== Edit Item ====");
         int id = Integer.valueOf(input.askStr("Enter item id: "));
         String name = input.askStr("Enter new name: ");
         Item item = new Item(id, name);
         if (tracker.replace(id, item)) {
-            System.out.println("Item replaced");
+            out.println("Item replaced");
         } else {
-            System.out.println("Item not found");
+            out.println("Item not found");
         }
         return true;
     }
