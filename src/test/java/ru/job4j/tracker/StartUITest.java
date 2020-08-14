@@ -107,4 +107,23 @@ public class StartUITest {
                         "0. Exit" + System.lineSeparator()
         ));
     }
+
+    @Test
+    public void whenFindAllAction() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0", "Item name", "1", "2"}
+        );
+        Tracker tracker = new Tracker();
+        UserAction[] actions = {
+                new CreateAction(out),
+                new ShowItemAction(out),
+                new ExitAction(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(out.toString(), is(
+                "=== Show all items ====" + System.lineSeparator() +
+                        "id: 1; name: Item name."));
+    }
+
 }
