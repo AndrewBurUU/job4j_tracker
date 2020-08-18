@@ -12,10 +12,10 @@ public class Fact {
     }
 
     public int calc(int n) {
-        int rsl = 1;
         if (n < 0) {
             throw new IllegalArgumentException("Number n shouldn't be less then zero.");
         }
+        int rsl = 1;
         for (int index = 1; index <= n; index++) {
              rsl *= index;
         }
