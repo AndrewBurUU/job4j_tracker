@@ -1,16 +1,18 @@
 package ru.job4j.tracker;
 
 import junit.framework.TestCase;
+import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class ItemSortDescTest extends TestCase {
+public class ItemSortDescTest {
 
+    @Test
     public void testCompare() {
         List<Item> items = Arrays.asList(
                 new Item(1,"aaa"),
@@ -22,6 +24,7 @@ public class ItemSortDescTest extends TestCase {
                 new Item(2,"bbb"),
                 new Item(1,"aaa")
         );
-        assertThat(Collection.sort(items, new ItemSortAscTest()), is(itemsSorted));
+        Collections.sort(items,new ItemSortDesc());
+        assertThat(items, is(itemsSorted));
     }
 }
