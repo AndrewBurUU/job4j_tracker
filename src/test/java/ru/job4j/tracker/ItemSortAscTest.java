@@ -14,14 +14,14 @@ public class ItemSortAscTest {
     @Test
     public void testCompare() {
         List<Item> items = Arrays.asList(
-          new Item(1,"aaa"),
+          new Item(1, "aaa"),
           new Item(3, "ccc"),
           new Item(2, "bbb")
         );
-        List<Item> itemsSorted = Arrays.asList (
+        List<Item> itemsSorted = Arrays.asList(
                 new Item(1, "aaa"),
-                new Item(2,"bbb"),
-                new Item(3,"ccc")
+                new Item(2, "bbb"),
+                new Item(3, "ccc")
         );
         Collections.sort(items, new ItemSortAsc());
         assertThat(items, is(itemsSorted));

@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Battery {
     private int load;
 
-    public Battery (int size) {
+    public Battery(int size) {
         this.load = size;
     }
 

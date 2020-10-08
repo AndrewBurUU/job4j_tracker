@@ -6,10 +6,14 @@ import java.util.List;
 public class ShowItemAction implements UserAction {
     private final Output out;
 
-    public ShowItemAction(Output out) {this.out = out;}
+    public ShowItemAction(Output out) {
+        this.out = out;
+    }
 
     @Override
-    public String name() {return "Show all";}
+    public String name() {
+        return "Show all";
+    }
 
     @Override
     public boolean execute(Input input, Tracker tracker) {

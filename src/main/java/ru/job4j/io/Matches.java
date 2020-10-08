@@ -20,7 +20,7 @@ public class Matches {
             }
             count = count - select;
             System.out.println("Остаток: " + String.valueOf(count));
-            player = ! player;
+            player = !player;
         }
         if (count == 0) {
             System.out.print(playerName + " победил!");

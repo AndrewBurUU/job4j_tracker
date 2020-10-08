@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Fact {
     public static void main(String[] args) {
         Fact f = new Fact();
-        System.out.println("Factorial is " +f.calc(-2));
+        System.out.println("Factorial is " + f.calc(-2));
     }
 
     public int calc(int n) {

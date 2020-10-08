@@ -6,13 +6,15 @@ public class Item {
     private int id;
     private String name;
 
-    public Item() {}
+    public Item() { }
 
     public Item(int id) {
         this.id = id;
     }
 
-    public Item(String name) { this.name = name; }
+    public Item(String name) {
+        this.name = name;
+    }
 
     public Item(int id, String name) {
         this.id = id;
@@ -37,10 +39,15 @@ public class Item {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Item item = (Item) o;
-        return id == item.id &&
+        return id == item.id
+                &&
                 Objects.equals(name, item.name);
     }
 

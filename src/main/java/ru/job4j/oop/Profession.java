@@ -6,10 +6,21 @@ public class Profession {
     private String education;
     private String birthday;
 
-    public String getName () {return "";}
-    public String getSurname () {return "";}
-    public String getEducation () {return "";}
-    public String getBirthday () {return "";}
+    public String getName() {
+        return "";
+    }
+
+    public String getSurname() {
+        return "";
+    }
+
+    public String getEducation() {
+        return "";
+    }
+
+    public String getBirthday() {
+        return "";
+    }
 
 }
 

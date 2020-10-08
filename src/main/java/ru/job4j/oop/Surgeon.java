@@ -1,5 +1,5 @@
 package ru.job4j.oop;
 
-public class Surgeon extends Doctor{
+public class Surgeon extends Doctor {
     private String bodyField;
 }

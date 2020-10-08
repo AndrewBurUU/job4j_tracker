@@ -9,7 +9,7 @@ public class College {
         student.setGroup("JJ1");
         student.setAdmissiondate("20.06.20");
 
-        System.out.println("Student: " + student.getFio() + ". Group № " +
-                student.getGroup() + ". Admission date: "+student.getAdmissiondate());
+        System.out.println("Student: " + student.getFio() + ". Group № "
+                + student.getGroup() + ". Admission date: " + student.getAdmissiondate());
     }
 }

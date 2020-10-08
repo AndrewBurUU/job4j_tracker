@@ -15,16 +15,16 @@ public class ItemSortDescTest {
     @Test
     public void testCompare() {
         List<Item> items = Arrays.asList(
-                new Item(1,"aaa"),
+                new Item(1, "aaa"),
                 new Item(3, "ccc"),
                 new Item(2, "bbb")
         );
-        List<Item> itemsSorted = Arrays.asList (
+        List<Item> itemsSorted = Arrays.asList(
                 new Item(3, "ccc"),
-                new Item(2,"bbb"),
-                new Item(1,"aaa")
+                new Item(2, "bbb"),
+                new Item(1, "aaa")
         );
-        Collections.sort(items,new ItemSortDesc());
+        Collections.sort(items, new ItemSortDesc());
         assertThat(items, is(itemsSorted));
     }
 }

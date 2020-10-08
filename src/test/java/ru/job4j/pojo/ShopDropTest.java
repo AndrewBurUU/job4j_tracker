@@ -6,7 +6,7 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.Test;
 
-public class ShopDropTest{
+public class ShopDropTest {
 
     @Test
     public void whenDropFirst() {

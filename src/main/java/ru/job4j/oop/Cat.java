@@ -6,14 +6,14 @@ public class Cat {
     private String food;
 
     public void show() {
-        System.out.println("This is "+ this.name + "'s food: " + this.food);
+        System.out.println("This is " + this.name + "'s food: " + this.food);
     }
 
     public void eat(String meat) {
         this.food = meat;
     }
 
-    public void giveNick(String nick){
+    public void giveNick(String nick) {
         this.name = nick;
     }
 

@@ -42,7 +42,7 @@ public class Tracker {
     public List<Item> findByName(String key) {
         List<Item> names = new ArrayList<Item>(size);
         for (Item item: items) {
-            if (item.getName().equals(key)){
+            if (item.getName().equals(key)) {
                 names.add(item);
             }
         }
@@ -53,7 +53,7 @@ public class Tracker {
         int idItem = indexOf(id);
         boolean rsl = idItem != -1;
         if (rsl) {
-            items.set(idItem,item);
+            items.set(idItem, item);
         }
         return rsl;
     }

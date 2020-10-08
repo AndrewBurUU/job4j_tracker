@@ -2,7 +2,7 @@ package ru.job4j.ex;
 
 import org.junit.Test;
 
-public class FactTest{
+public class FactTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void whenNisNegative() {
