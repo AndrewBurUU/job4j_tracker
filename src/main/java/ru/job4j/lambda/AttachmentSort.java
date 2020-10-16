@@ -15,7 +15,7 @@ public class AttachmentSort {
         //анонимный класс Comparator
         Comparator<Attachment> comparator =  new Comparator<Attachment>() {
             @Override
-            public int compare(Object o1, Object o2) {
+            public int compare(Attachment o1, Attachment o2) {
                 Attachment left = (Attachment) o1;
                 Attachment right = (Attachment) o2;
                 return left.getSize() - right.getSize();
@@ -23,7 +23,7 @@ public class AttachmentSort {
         };
         Comparator<Attachment> comparatorName =  new Comparator<Attachment>() {
             @Override
-            public int compare(Object o1, Object o2) {
+            public int compare(Attachment o1, Attachment o2) {
                 Attachment left = (Attachment) o1;
                 Attachment right = (Attachment) o2;
                 return left.getName().compareTo(right.getName());
@@ -32,7 +32,7 @@ public class AttachmentSort {
         //анонимный класс ArrayList
         ArrayList<Integer> list = new ArrayList<Integer>() {
             @Override
-            public boolean add(Object o) {
+            public boolean add(Integer o) {
                 System.out.println("Add a new element to list: " + o);
                 return super.add(o);
             }
