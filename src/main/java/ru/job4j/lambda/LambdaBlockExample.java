@@ -14,7 +14,19 @@ public class LambdaBlockExample {
             System.out.println("cmpDescSize - " + right + " : " + left);
             return right.length() - left.length();
         };
-        Arrays.sort(strings, cmpDescSize);
+
+        String[] names = {
+                "Ivan",
+                "Andrew"
+        };
+        Comparator<String> lengthCmp = (left, right) -> {
+            System.out.println("execute comparator");
+            return left.length() - right.length();
+        };
+
+//        Arrays.sort(names, lengthCmp);
+//        Arrays.sort(strings, cmpDescSize);
+        Arrays.sort(names,lengthCmp);
     }
 
 }
